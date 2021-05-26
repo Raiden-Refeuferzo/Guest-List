@@ -1,32 +1,27 @@
-canvas=document.getElementById("myCanvas");
-ctx=canvas.getContext("2d");
-ctx.beginPath();
-ctx.strokeStyle="red";
-ctx.lineWidth=1;
-ctx.rect(165,143,430,200);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="blue";
-ctx.lineWidth=4;
-ctx.arc(290,200,40,0,2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="black";
-ctx.lineWidth=4;
-ctx.arc(380,200,40,0,2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="red";
-ctx.lineWidth=4;
-ctx.arc(470,200,40,0,2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="yellow";
-ctx.lineWidth=4;
-ctx.arc(335,250,40,0,2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="green";
-ctx.lineWidth=4;
-ctx.arc(425,250,40,0,2*Math.PI);
-ctx.stroke();
+name_guest_array=[];
+function submit()
+{
+    var name_1=document.getElementById("name_guest").value;
+    name_guest_array.push(name_1);
+    document.getElementById("display_name").innerHTML=name_guest_array;
+    document.getElementById("sort_button").style.display="inline-block";
+}
+function sorting()
+{
+    name_guest_array.sort();
+    console.log(name_guest_array);
+    document.getElementById("display_name").innerHTML=name_guest_array;
+}
+function search(){
+    var s=document.getElementById("search_name").value;
+    var found=0;
+    var j;
+    for(j=0; j<name_guest_array.length; j++)
+    {
+        if(s==name_guest_array[j]){
+            found=found+1;
+        }
+    }
+    document.getElementById("display_search").innerHTML="name found"+found+" time/s";
+    console.log("found name"+found+"time/s");
+}

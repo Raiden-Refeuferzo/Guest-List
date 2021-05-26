@@ -1,11 +1,12 @@
-.body_backgorund {
-	background-image: url("bg1.jpg");
-	background-position: center;
-	background-size:cover;
-}
-
-#myCanvas{
-border-width:10px;
-background-color:white;
-border-style:ridge;
-}
+#submit_button { 
+    margin-top: 20px;
+    margin-bottom: 20px;
+ } 
+#sort_button { 
+    display: none; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+ } 
+input { 
+    margin: 10px;
+ }
